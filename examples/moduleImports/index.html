@@ -1,0 +1,11 @@
+<h1>Module Imports</h1>
+
+<p>This page will register a service worker that'll use <strong>module imports</strong>
+to pull in workbox and the relative pieces.</p>
+
+<script>
+  navigator.serviceWorker.register('./bundled-sw.js')
+  .catch((err) => {
+    console.log('SW failed to register.', err);
+  });
+</script>

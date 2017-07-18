@@ -1,0 +1,11 @@
+<h1>importScripts()</h1>
+
+<p>This page will register a service worker that'll use <code>importScripts()</code>
+to pull in workbox and the relative pieces.</p>
+
+<script>
+  navigator.serviceWorker.register('./sw.js')
+  .catch((err) => {
+    console.log('SW failed to register.', err);
+  });
+</script>

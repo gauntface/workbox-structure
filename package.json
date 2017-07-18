@@ -1,0 +1,29 @@
+{
+  "name": "workbox-structure",
+  "version": "1.0.0",
+  "description": "```shell npm install --global rollup rollup examples/moduleImports/sw.js --output examples/moduleImports/bundled-sw.js ```",
+  "main": "rollup.config.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "rollup": "^0.45.2",
+    "rollup-plugin-alias": "^1.3.1",
+    "rollup-watch": "^4.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauntface/workbox-structure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gauntface/workbox-structure/issues"
+  },
+  "homepage": "https://github.com/gauntface/workbox-structure#readme"
+}
