@@ -13,26 +13,20 @@ class Workbox {
   }
 
   get precaching() {
-    if (this._precacheController) {
-      return this._precacheController;
+    if (google.workbox.precaching) {
+      return google.workbox.precaching.default;
     }
 
-    this.loadModule('workbox-precaching', 'bundle');
-
-    this._precacheController = new google.workbox.precaching.PrecacheController({
-      defaultCacheName: this._defaultCacheName,
-    });
-    return this._precacheController;
+    this.loadModule('workbox-precaching', 'public-interface');
+    return google.workbox.precaching.default;
   }
 
-  get router() {
-    if (this._router) {
-      return this._router;
+  get routing() {
+    if (google.workbox.routing) {
+      return google.workbox.routing.default;
     }
 
-    this.loadModule('workbox-routing', 'bundle');
-
-    this._router = new google.workbox.routing.Router();
-    return this._router;
+    this.loadModule('workbox-routing', 'public-interface');
+    return google.workbox.routing.default;
   }
 }

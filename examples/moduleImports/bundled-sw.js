@@ -58,6 +58,8 @@ class PrecacheController {
   }
 }
 
+const precaching = new PrecacheController();
+
 class Router {
   constructor() {
     application.INTERNAL.logHelper.log('Router Constructor.');
@@ -74,34 +76,17 @@ class Route {
   }
 }
 
-// Step 1: Open up JUST workbox core.
-application.options = {
-  env: 'dev',
-  defaultCacheName: 'overriden-default-cache-name',
-  logLevel: 'verbose',
-  logFilter: (logDetails) => {
-    if (logDetails.message.indexOf('/specific-url') !== -1) {
-      // Yes display log
-      return true;
-    }
+const router = new Router();
 
-    // No do not display log.
-    return false;
-  },
+application.options = {
+  defaultCacheName: 'overriden-default-cache-name',
 };
 
-// Step 2: Access precaching
-const precacheController = new PrecacheController();
-precacheController.precache([
+precaching.precache([
   {url: '/', revision: '123'},
   {url: '/main.css', revision: '456'},
 ]);
 
-// Step 3: Routing
-const router = new Router();
 router.registerRoute(new Route());
-
-console.log('self.google namespace: ', self.google);
-console.log('self.workbox: ', self.workbox);
 
 }());

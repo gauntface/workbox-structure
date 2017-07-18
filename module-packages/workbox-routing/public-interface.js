@@ -4,10 +4,13 @@ import ExpressRoute from './ExpressRoute';
 import NavigationRoute from './NavigationRoute';
 import RegExpRoute from './RegExpRoute';
 
-export default {
+const router = new Router();
+
+export {
   Router,
   Route,
   ExpressRoute,
   NavigationRoute,
   RegExpRoute
 }
+export default router;

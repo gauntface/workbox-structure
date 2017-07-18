@@ -26,8 +26,8 @@ export default [
 
   // Create the bundled precaching file
   {
-    entry: 'module-packages/workbox-precaching/bundle.js',
-    dest: 'module-to-umd/workbox-precaching/bundle.js',
+    entry: 'module-packages/workbox-precaching/public-interface.js',
+    dest: 'module-to-umd/workbox-precaching/public-interface.js',
     format: 'umd',
     moduleName: 'google.workbox.precaching',
     globals: {
@@ -36,12 +36,13 @@ export default [
     external: [
       'workboxApplication'
     ],
+    exports: 'named'
   },
 
   // Create the bundled routing file
   {
-    entry: 'module-packages/workbox-routing/bundle.js',
-    dest: 'module-to-umd/workbox-routing/bundle.js',
+    entry: 'module-packages/workbox-routing/public-interface.js',
+    dest: 'module-to-umd/workbox-routing/public-interface.js',
     format: 'umd',
     moduleName: 'google.workbox.routing',
     globals: {
@@ -50,5 +51,6 @@ export default [
     external: [
       'workboxApplication'
     ],
+    exports: 'named'
   }
 ];
