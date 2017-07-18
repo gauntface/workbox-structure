@@ -1,0 +1,14 @@
+{
+  "name": "workbox-core",
+  "version": "3.0.0",
+  "files": [
+    "umd.js",
+    "module.js",
+    "lib/"
+  ],
+  "main": "./build/umd.js",
+  "module": "./module.js",
+  "scripts": {
+    "prepublish": "rollup -c"
+  }
+}

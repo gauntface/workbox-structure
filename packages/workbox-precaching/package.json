@@ -1,0 +1,17 @@
+{
+  "name": "workbox-precaching",
+  "version": "3.0.0",
+  "files": [
+    "umd.js",
+    "module.js",
+    "lib/"
+  ],
+  "main": "./build/umd.js",
+  "module": "./module.js",
+  "scripts": {
+    "prepublish": "rollup -c"
+  },
+  "dependencies": {
+    "workbox-core": "3.0.0"
+  }
+}

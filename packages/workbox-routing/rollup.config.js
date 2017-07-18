@@ -1,0 +1,5 @@
+const rollupUtils = require('../../utils/rollup-utils.js');
+
+export default [
+  rollupUtils.generateBuildConfig('workbox-routing', 'google.workbox.routing')
+];

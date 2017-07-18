@@ -1,2 +1,5 @@
 node_modules/
-module-to-umd/
+build/
+test/example-rollup-files/build/
+lerna-debug.log
+npm-debug.log
