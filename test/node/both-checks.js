@@ -3,9 +3,11 @@ const path = require('path');
 const proxyquire = require('proxyquire').noCallThru();;
 const expect = require('chai').expect;
 
+const examplesPath = path.join(__dirname, '..', '..', 'packages', 'example-rollup-files', 'build');
+
 describe('Test Rollup Output - both imports', function() {
   it('should only import shared utils once and import PrecacheController and Route.', function() {
-    const bothDefaultImports = fs.readFileSync(path.join(__dirname, '..', 'example-rollup-files', 'build', 'both-named-imports.js')).toString();
+    const bothDefaultImports = fs.readFileSync(path.join(examplesPath, 'both-named-imports.js')).toString();
 
     // Shouldn't exist - this is a default export that we don't use.
     const regexTests = [
@@ -38,7 +40,7 @@ describe('Test Rollup Output - both imports', function() {
   });
 
   it('should only import shared utils once and import "defaults".', function() {
-    const bothDefaultImports = fs.readFileSync(path.join(__dirname, '..', 'example-rollup-files', 'build', 'both-default-imports.js')).toString();
+    const bothDefaultImports = fs.readFileSync(path.join(examplesPath, 'both-default-imports.js')).toString();
 
     // Shouldn't exist - this is a default export that we don't use.
     const regexTests = [

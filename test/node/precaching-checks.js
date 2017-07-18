@@ -3,9 +3,11 @@ const path = require('path');
 const proxyquire = require('proxyquire').noCallThru();;
 const expect = require('chai').expect;
 
+const examplesPath = path.join(__dirname, '..', '..', 'packages', 'example-rollup-files', 'build');
+
 describe('Test Rollup Output - precaching', function() {
   it('should only import shared utils once and only import PrecacheController().', function() {
-    const precachingNamedImport = fs.readFileSync(path.join(__dirname, '..', 'example-rollup-files', 'build', 'precaching-named-import.js')).toString();
+    const precachingNamedImport = fs.readFileSync(path.join(examplesPath, 'precaching-named-import.js')).toString();
 
     // Shouldn't exist - this is a default export that we don't use.
     const regexTests = [
@@ -34,7 +36,7 @@ describe('Test Rollup Output - precaching', function() {
   });
 
   it('should pull the precaching "default" export', function() {
-    const precachingNamedImport = fs.readFileSync(path.join(__dirname, '..', 'example-rollup-files', 'build', 'precaching-default-import.js')).toString();
+    const precachingNamedImport = fs.readFileSync(path.join(examplesPath, 'precaching-default-import.js')).toString();
 
     // Shouldn't exist - this is a default export that we don't use.
     const regexTests = [
