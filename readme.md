@@ -1,6 +1,11 @@
 # Building Module Imports Version
 
 ```shell
-npm install --global rollup
-rollup examples/moduleImports/sw.js --output examples/moduleImports/bundled-sw.js
+npm run build
 ```
+
+# Examples
+
+Start a server on the root of this directory and view the logs in the examples.
+Notice that the default cache name is overriden and function calls are shared
+across importScripts and modules.
