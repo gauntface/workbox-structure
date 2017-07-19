@@ -5,6 +5,8 @@ class Workbox {
 
     // This is required
     this.loadModule('workbox-core');
+
+    google.workbox.INTERNAL.core.default.options = options;
   }
 
   loadModule(moduleName) {
