@@ -10,5 +10,5 @@ workbox.precaching.precache([
   {url: '/main.css', revision: '456'},
 ]);
 
-workbox.routing.registerRoute(new google.workbox.routing.Route());
+workbox.routing.registerRoute(new workbox.routing.Route());
 

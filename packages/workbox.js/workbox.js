@@ -6,7 +6,7 @@ class Workbox {
     // This is required
     this.loadModule('workbox-core');
 
-    google.workbox.INTERNAL.core.default.options = options;
+    workbox.INTERNAL.core.default.options = options;
   }
 
   loadModule(moduleName) {
@@ -15,20 +15,20 @@ class Workbox {
   }
 
   get precaching() {
-    if (google.workbox.precaching) {
-      return google.workbox.precaching.default;
+    if (workbox.precaching) {
+      return workbox.precaching.default;
     }
 
     this.loadModule('workbox-precaching');
-    return google.workbox.precaching.default;
+    return workbox.precaching.default;
   }
 
   get routing() {
-    if (google.workbox.routing) {
-      return google.workbox.routing.default;
+    if (workbox.routing) {
+      return workbox.routing.default;
     }
 
     this.loadModule('workbox-routing');
-    return google.workbox.routing.default;
+    return workbox.routing.default;
   }
 }

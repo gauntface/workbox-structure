@@ -6,7 +6,7 @@ const SRC = path.join(__dirname, '..', 'packages');
 // This makes Rollup assume workbox-core will be added to the global
 // scope and replace references with the core namespace
 const globals = {
-  'workbox-core': 'google.workbox.INTERNAL.core',
+  'workbox-core': 'workbox.INTERNAL.core',
 };
 const external = [
   'workbox-core'
