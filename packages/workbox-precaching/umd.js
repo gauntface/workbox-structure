@@ -1,5 +1,5 @@
-import PrecacheController from './lib/PrecacheController.js';
-import precaching from './module.js';
+import PrecacheController from './src/PrecacheController.js';
+import precaching from './src/module.js';
 
 export {
   PrecacheController

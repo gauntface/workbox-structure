@@ -1,1 +1,1 @@
-import PrecacheController from 'workbox-precaching/lib/PrecacheController';
+import PrecacheController from 'workbox-precaching/PrecacheController';

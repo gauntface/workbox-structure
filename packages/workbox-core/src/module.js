@@ -1,4 +1,4 @@
-import LogHelper from './lib/LogHelper';
+import LogHelper from './LogHelper';
 
 class WorkboxApplication {
   constructor() {

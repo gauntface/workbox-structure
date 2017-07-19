@@ -1,2 +1,2 @@
-import PrecacheController from 'workbox-precaching/lib/PrecacheController';
-import Route from 'workbox-routing/lib/Route';
+import PrecacheController from 'workbox-precaching/PrecacheController';
+import Route from 'workbox-routing/Route';

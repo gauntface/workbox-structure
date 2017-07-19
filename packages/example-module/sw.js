@@ -1,7 +1,7 @@
 import workbox from 'workbox-core';
 import precaching from 'workbox-precaching';
 import routing from 'workbox-routing';
-import Route from 'workbox-routing/lib/Route';
+import Route from 'workbox-routing/src/Route';
 
 workbox.options = {
   defaultCacheName: 'overriden-default-cache-name',
