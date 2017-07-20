@@ -1,9 +1,9 @@
-import Router from './src/Router';
-import Route from './src/Route';
-import ExpressRoute from './src/ExpressRoute';
-import NavigationRoute from './src/NavigationRoute';
-import RegExpRoute from './src/RegExpRoute';
-import routing from './src/module.js';
+import Router from './Router';
+import Route from './Route';
+import ExpressRoute from './ExpressRoute';
+import NavigationRoute from './NavigationRoute';
+import RegExpRoute from './RegExpRoute';
+import module from './module.js';
 
 export {
   Router,
@@ -12,4 +12,5 @@ export {
   NavigationRoute,
   RegExpRoute
 }
-export default routing;
+
+export default module;

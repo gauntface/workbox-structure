@@ -1,6 +1,6 @@
 import LogHelper from './LogHelper';
 
-class WorkboxApplication {
+class WorkboxCore {
   constructor() {
     console.log('[Workbox-Core] Constructor');
 
@@ -32,4 +32,5 @@ class WorkboxApplication {
   }
 }
 
-export default new WorkboxApplication();
+// Force a single instance.
+export default new WorkboxCore();

@@ -1,8 +1,0 @@
-{
-  "name": "workbox.js",
-  "version": "3.0.0",
-  "files": [
-    "workbox.js"
-  ],
-  "main": "./workbox.js"
-}

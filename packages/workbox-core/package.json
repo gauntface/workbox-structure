@@ -6,7 +6,7 @@
     "src/"
   ],
   "main": "./build/umd.js",
-  "module": "./src/module.js",
+  "module": "./module.js",
   "scripts": {
     "prepublish": "rollup -c"
   }

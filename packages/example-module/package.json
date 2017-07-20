@@ -2,6 +2,7 @@
   "name": "'structure-example'",
   "version": "1.0.0",
   "devDependencies": {
+    "workbox-loader": "^3.0.0",
     "workbox-core": "^3.0.0",
     "workbox-precaching": "^3.0.0",
     "workbox-routing": "^3.0.0",

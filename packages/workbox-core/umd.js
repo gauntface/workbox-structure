@@ -1,2 +1,2 @@
-import core from './src/module.js';
-export default core;
+import module from './module.js';
+export default module;
