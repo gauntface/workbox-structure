@@ -3,6 +3,7 @@
     constructor(options) {
       console.log('[WorkboxLoader.constructor]');
 
+      this._useCDN = true;
       this._packagesPath = '/packages';
       this._DEFAULTS = {};
 
@@ -13,8 +14,15 @@
     }
 
     _loadModule(moduleName) {
+      if (!this._useCDN) {
+        throw new Error(`Missing module '${moduleName}.`);
+      }
       console.log('[Loader.load()] ', moduleName);
       importScripts(`${this._packagesPath}/${moduleName}/build/umd.js`);
+    }
+
+    disableCDN() {
+      this._useCDN = false;
     }
 
     get core() {

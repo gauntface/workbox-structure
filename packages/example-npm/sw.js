@@ -3,6 +3,8 @@ importScripts('./node_modules/workbox-precaching/build/umd.js');
 importScripts('./node_modules/workbox-routing/build/umd.js');
 importScripts('./node_modules/workbox-loader/umd.js');
 
+workbox.disableCDN();
+
 workbox.core.options = {
   defaultCacheName: 'overriden-default-cache-name',
 };
