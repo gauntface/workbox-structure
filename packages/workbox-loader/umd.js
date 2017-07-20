@@ -7,7 +7,9 @@
       this._DEFAULTS = {};
 
       // This is required
-      this._loadModule('workbox-core');
+      if (!google || !google.workbox || !google.workbox.core) {
+        this._loadModule('workbox-core');
+      }
     }
 
     _loadModule(moduleName) {
