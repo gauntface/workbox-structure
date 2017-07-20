@@ -3,7 +3,7 @@ const path = require('path');
 const proxyquire = require('proxyquire').noCallThru();;
 const expect = require('chai').expect;
 
-const examplesPath = path.join(__dirname, '..', '..', 'packages', 'example-rollup-files', 'build');
+const examplesPath = path.join(__dirname, '..', '..', 'packages', 'static-test-files', 'build');
 
 describe('Test Rollup Output - precaching', function() {
   it('should only import shared utils once and only import PrecacheController().', function() {
@@ -16,11 +16,11 @@ describe('Test Rollup Output - precaching', function() {
         expectedCount: 1,
       },
       {
-        regex: /class WorkboxApplication/g,
+        regex: /class WorkboxCore/g,
         expectedCount: 1,
       },
       {
-        regex: /new WorkboxApplication\(/g,
+        regex: /new WorkboxCore\(/g,
         expectedCount: 1,
       },
       {
@@ -45,11 +45,11 @@ describe('Test Rollup Output - precaching', function() {
         expectedCount: 1,
       },
       {
-        regex: /class WorkboxApplication/g,
+        regex: /class WorkboxCore/g,
         expectedCount: 1,
       },
       {
-        regex: /new WorkboxApplication\(/g,
+        regex: /new WorkboxCore\(/g,
         expectedCount: 1,
       },
       {
