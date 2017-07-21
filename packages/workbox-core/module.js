@@ -1,4 +1,5 @@
 import LogHelper from './LogHelper';
+import Assertions from './Assertions';
 
 class WorkboxCore {
   constructor() {
@@ -38,11 +39,7 @@ class WorkboxCore {
     });
 
     if (process.env.NODE_ENV !== 'production') {
-      this._internal.assertions = {
-        check: () => {
-          console.log('Perform a check');
-        }
-      };
+      this._internal.assertions = new Assertions();
     }
 
     return this._internal;
