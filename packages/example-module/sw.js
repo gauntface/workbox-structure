@@ -1,9 +1,9 @@
-import workbox from 'workbox-core';
+import core from 'workbox-core';
 import precaching from 'workbox-precaching';
 import routing from 'workbox-routing';
-import Route from 'workbox-routing/src/Route';
+import Route from 'workbox-routing/Route';
 
-workbox.options = {
+core.options = {
   defaultCacheName: 'overriden-default-cache-name',
 };
 

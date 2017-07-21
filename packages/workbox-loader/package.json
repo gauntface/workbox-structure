@@ -1,0 +1,15 @@
+{
+  "name": "workbox-loader",
+  "version": "3.0.0",
+  "devDependencies": {
+    "workbox-core": "^3.0.0",
+    "workbox-precaching": "^3.0.0",
+    "workbox-routing": "^3.0.0"
+  },
+  "files": [
+    "umd.js",
+    "module.js"
+  ],
+  "main": "./umd.js",
+  "module": "./module.js"
+}
