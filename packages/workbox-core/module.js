@@ -4,6 +4,13 @@ class WorkboxCore {
   constructor() {
     console.log('[Workbox-Core] Constructor');
 
+    // This handles the case where a developer uses the module source and
+    // doesn't have a plugin set up to define 'NODE_ENV'.
+    // This means we can rely on NODE_ENV always existing.
+    if (typeof NODE_ENV === 'undefined') {
+      self['NODE_ENV'] = '';
+    }
+
     this._options = {
       defaultCacheName: 'workbox-default-cache-name',
     };
