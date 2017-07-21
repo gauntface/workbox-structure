@@ -10,7 +10,6 @@ export {
   Route,
   ExpressRoute,
   NavigationRoute,
-  RegExpRoute
+  RegExpRoute,
+  module as instance
 }
-
-export default module;

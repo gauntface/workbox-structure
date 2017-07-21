@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs-extra');
+const replace = require('rollup-plugin-replace');
 
 const NAMESPACE_PREFIX = 'google.workbox';
 const SRC = path.join(__dirname, '..', 'packages');
@@ -13,18 +14,29 @@ const external = [
   'workbox-core'
 ];
 
+const getBuildDetails = (moduleName, namespace, buildType) => {
+  return {
+    entry: `${SRC}/${moduleName}/umd.js`,
+    dest: `${SRC}/${moduleName}/build/umd-${buildType}.js`,
+    format: 'umd',
+    moduleName: `${NAMESPACE_PREFIX}.${namespace}`,
+    globals,
+    external,
+    plugins: [
+      replace({
+        WORKBOX_BUILD: JSON.stringify(buildType),
+      })
+    ]
+  };
+};
+
 module.exports = {
   generateBuildConfig: (moduleName, namespace) => {
     fs.removeSync(`${SRC}/${moduleName}/build/`);
 
-    // UMD
-    return {
-      entry: `${SRC}/${moduleName}/umd.js`,
-      dest: `${SRC}/${moduleName}/build/umd.js`,
-      format: 'umd',
-      moduleName: `${NAMESPACE_PREFIX}.${namespace}`,
-      globals,
-      external,
-    };
+    return [
+      getBuildDetails(moduleName, namespace, 'development'),
+      getBuildDetails(moduleName, namespace, 'production'),
+    ];
   }
 };

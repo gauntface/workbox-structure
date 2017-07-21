@@ -1,8 +1,14 @@
 import core from 'workbox-core';
+import errorCodes from './src/error-messages';
 
 export default class PrecacheController {
   constructor() {
     core.INTERNAL.logHelper.log('WorkboxPrecaching Constructor');
+    if (errorCodes) {
+      console.log('WorkboxPrecaching Example Error Message: ', errorCodes['example-error-code']);
+    } else {
+      console.log('No Error Codes Defined');
+    }
   }
 
   precache(assets) {
