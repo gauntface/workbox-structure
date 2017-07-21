@@ -6,6 +6,7 @@
     "workbox-core": "^3.0.0",
     "workbox-precaching": "^3.0.0",
     "workbox-routing": "^3.0.0",
+    "workbox-strategies": "^3.0.0",
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "scripts": {
