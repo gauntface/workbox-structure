@@ -1,9 +1,13 @@
-importScripts('./node_modules/workbox-core/build/umd.js');
-importScripts('./node_modules/workbox-precaching/build/umd.js');
-importScripts('./node_modules/workbox-routing/build/umd.js');
-importScripts('./node_modules/workbox-loader/umd.js');
+const enviroment = 'development';
 
-workbox.disableCDN();
+importScripts(`./node_modules/workbox-core/build/umd-${enviroment}.js`);
+importScripts(`./node_modules/workbox-precaching/build/umd-${enviroment}.js`);
+importScripts(`./node_modules/workbox-routing/build/umd-${enviroment}.js`);
+importScripts(`./node_modules/workbox-loader/umd.js`);
+
+const workbox = new Workbox({
+  useCDN: false,
+});
 
 workbox.core.options = {
   defaultCacheName: 'overriden-default-cache-name',
