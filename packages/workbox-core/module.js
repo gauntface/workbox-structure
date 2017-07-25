@@ -1,4 +1,5 @@
-import LogHelper from './LogHelper';
+import LogHelper from './src/LogHelper';
+import assertions from './src/Assertions';
 
 class WorkboxCore {
   constructor() {
@@ -27,6 +28,7 @@ class WorkboxCore {
       logLevel: this._options.logLevel,
       logFilter: this._options.logFilter
     });
+    this._internal.assertions = assertions;
 
     return this._internal;
   }

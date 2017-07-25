@@ -1,8 +1,8 @@
 importScripts('/packages/workbox-loader/umd.js');
 
 const workbox = new Workbox({
-  // Can be 'dev' or 'prod'
-  env: 'dev'
+  // Can be 'production'
+  env: 'production'
 });
 
 workbox.core.options = {
