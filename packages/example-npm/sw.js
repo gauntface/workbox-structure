@@ -1,4 +1,4 @@
-const enviroment = 'development';
+const enviroment = 'production';
 
 importScripts(`./node_modules/workbox-core/build/umd-${enviroment}.js`);
 importScripts(`./node_modules/workbox-precaching/build/umd-${enviroment}.js`);

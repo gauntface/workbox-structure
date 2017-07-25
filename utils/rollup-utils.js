@@ -24,7 +24,7 @@ const getBuildDetails = (moduleName, namespace, buildType) => {
     external,
     plugins: [
       replace({
-        WORKBOX_BUILD: JSON.stringify(buildType),
+        'process.env.NODE_ENV': JSON.stringify(buildType),
       })
     ]
   };

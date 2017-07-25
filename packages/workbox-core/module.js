@@ -1,9 +1,19 @@
-import LogHelper from './src/LogHelper';
-import assertions from './src/Assertions';
+import LogHelper from './LogHelper';
+import Assertions from './Assertions';
+import RequestWrapper from './RequestWrapper';
 
 class WorkboxCore {
   constructor() {
     console.log('[Workbox-Core] Constructor');
+
+    if (!self.process || !self.process.env || !self.process.env['NODE_ENV']) {
+      // This handles the case where a developer uses the module source and
+      // doesn't have a plugin set up to define 'NODE_ENV'.
+      // This means we can rely on NODE_ENV always existing.
+      self.process = self.process || {};
+      self.process.env = self.process.env || {};
+      self.process.env['NODE_ENV'] = self.process.env['NODE_ENV'] || '';
+    }
 
     this._options = {
       defaultCacheName: 'workbox-default-cache-name',
@@ -28,7 +38,12 @@ class WorkboxCore {
       logLevel: this._options.logLevel,
       logFilter: this._options.logFilter
     });
-    this._internal.assertions = assertions;
+
+    this._internal.requestWrapper = new RequestWrapper();
+
+    if (process.env.NODE_ENV !== 'production') {
+      this._internal.assertions = new Assertions();
+    }
 
     return this._internal;
   }

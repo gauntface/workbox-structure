@@ -1,0 +1,16 @@
+{
+  "name": "workbox-strategies",
+  "version": "3.0.0",
+  "files": [
+    "build/",
+    "src/"
+  ],
+  "main": "./build/umd.js",
+  "module": "module.js",
+  "scripts": {
+    "prepublish": "rollup -c"
+  },
+  "dependencies": {
+    "workbox-core": "3.0.0"
+  }
+}
