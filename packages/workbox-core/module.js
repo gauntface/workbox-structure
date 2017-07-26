@@ -1,4 +1,4 @@
-import LogHelper from './LogHelper';
+import LogHelper from './src/LogHelper';
 import Assertions from './Assertions';
 import RequestWrapper from './RequestWrapper';
 
