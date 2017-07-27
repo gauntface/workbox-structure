@@ -9,5 +9,8 @@
   "module": "./module.js",
   "scripts": {
     "prepublish": "rollup -c"
+  },
+  "dependencies": {
+    "react": "^15.6.1"
   }
 }

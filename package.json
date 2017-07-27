@@ -4,6 +4,7 @@
   "description": "```shell npm install --global rollup rollup examples/moduleImports/sw.js --output examples/moduleImports/bundled-sw.js ```",
   "main": "rollup.config.js",
   "dependencies": {
+    "bundle-size": "^1.1.5"
   },
   "devDependencies": {
     "chai": "^4.1.0",
