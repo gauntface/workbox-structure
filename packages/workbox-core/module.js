@@ -1,4 +1,4 @@
-import LogHelper from './LogHelper';
+import LogHelper from './src/LogHelper';
 import Assertions from './Assertions';
 import RequestWrapper from './RequestWrapper';
 
@@ -38,6 +38,7 @@ class WorkboxCore {
       logLevel: this._options.logLevel,
       logFilter: this._options.logFilter
     });
+
     this._internal.requestWrapper = new RequestWrapper();
 
     if (process.env.NODE_ENV !== 'production') {

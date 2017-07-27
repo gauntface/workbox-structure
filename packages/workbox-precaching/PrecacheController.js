@@ -3,6 +3,10 @@ import errorCodes from './src/error-messages';
 
 export default class PrecacheController {
   constructor() {
+    if ((typeof WORKBOX_BUILD === 'undefined' || WORKBOX_BUILD !== 'production')) {
+      core.INTERNAL.assertions.check();
+    }
+
     core.INTERNAL.logHelper.log('WorkboxPrecaching Constructor');
 
     if (errorCodes) {
