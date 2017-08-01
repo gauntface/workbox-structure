@@ -14,10 +14,6 @@ module.exports = {
           '**/rollup.config.js',
         ]
       },
-      limits: {
-        // Max file size of 10 MB
-        maxFileSize: 10000000
-      }
     }),
   ],
 };
